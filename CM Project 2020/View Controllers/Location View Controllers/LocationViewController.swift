@@ -14,9 +14,15 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var sideMenuButton: UIButton!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var streetTextField: UITextField!
+    @IBOutlet weak var geocodeButton: UIButton!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var mysideMenu = true
-    
+    lazy var geocoder = CLGeocoder()
+
     
     @IBAction func sideMenu(_ sender: Any) {
         if (mysideMenu) {
@@ -29,6 +35,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         }
         mysideMenu = !mysideMenu
     }
+    
     @IBAction func sideMenuBackAreYouSafe(_ sender: Any) {
             if mysideMenu == false{
                 leadingConst.constant = 417
@@ -41,12 +48,9 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
             mysideMenu = !mysideMenu
         }
     
-    
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     
     @IBOutlet weak var errorLabel: UILabel!
-    
-    @IBOutlet weak var addressTextView: UITextView!
     
     @IBOutlet weak var loadbutton: UIButton!
     
@@ -61,8 +65,6 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
         getCurrentLocation()
         mapView.layer.cornerRadius = 15
         mapView.layer.masksToBounds = true
-        addressTextView.layer.cornerRadius = 10
-        addressTextView.layer.masksToBounds = true
         loadbutton.layer.cornerRadius = 10
         loadbutton.layer.masksToBounds = true
         yourLocationButton.layer.cornerRadius = 10
@@ -119,81 +121,115 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
                                   
             elevationRequest.getElevation { (ElevationInfo) in
             let elevationdata = ElevationInfo.data
-                
+            let elevationstatus = ElevationInfo.status
+            
             let myResult = elevationdata.map(String.init).joined()
-                
             let intResult = Int(myResult)
             
       
             DispatchQueue.main.async {
-                                
+            
+            print(elevationstatus)
+                
+            if elevationstatus == "fail" {
+                self.errorLabel.text = ("Error Occured, unable to access data")
+                
+            }
             if intResult! <= 40 {
-                self.errorLabel.text = ("You should travel more in land (>1.6km) or go to a higher place!")
+                
+                self.errorLabel.text = ("You are only \(intResult!)m tall, you should travel more in land (>1.6km) or go to a higher place!")
+                
             } else {
-                self.errorLabel.text = ("High Enough, you are safe :D")
+                
+                self.errorLabel.text = ("You are \(intResult!)m tall, you are safe :D")
+                
             }
         }
     }
 }
     
     @IBAction func getLatLongButtonPressed(_ sender: Any) {
-        if addressTextView.text.count > 0 {
-            LocationManager.shared.getReverseGeoCodedLocation(address: addressTextView.text!, completionHandler: { (location:CLLocation?, placemark:CLPlacemark?, error:NSError?) in
-                
-                if error != nil {
-                    print((error?.localizedDescription)!)
-                    return
-                }
-                
-                guard let placemark = placemark else {
-                    print("Location can't be fetched")
-                    return
-                }
-                
-                let errorinfo = (placemark.addressDictionary?.description ?? "")
-                let latinfo = ((placemark.location?.coordinate.latitude)!)
-                let loninfo = ((placemark.location?.coordinate.longitude)!)
-                
-                let latitudedouble = Double(latinfo)
-                let longitudedouble = Double(loninfo)
+        
+        guard let country = countryTextField.text else { return }
+        guard let street = streetTextField.text else { return }
+        guard let city = cityTextField.text else { return }
 
-                let annotation = MKPointAnnotation()
-                                          
-                annotation.coordinate = CLLocationCoordinate2D(latitude: latitudedouble, longitude: longitudedouble)
-                
-                self.mapView.addAnnotation(annotation)
-                
-                let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-                
-                self.mapView.setRegion(region, animated: true)
-                
-//              print("\(latinfo), \(loninfo), \(errorinfo)")
-                
-                let elevationRequest = ElevationRequest(geoCoding: "\(latinfo),\(loninfo)")
-                
-                elevationRequest.getElevation { (ElevationInfo) in
-                    let elevationdata = ElevationInfo.data
-                                    
-                    let myResult = elevationdata.map(String.init).joined()
-                    
-                    let intResult = Int(myResult)
-                    
-                    print(intResult!)
-                    
+        // Create Address String
+        let address = "\(country), \(city), \(street)"
 
-                    DispatchQueue.main.async { // Correct
+        // Geocode Address String
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            // Process Response
+            self.processResponse(withPlacemarks: placemarks, error: error)
+        }
+
+        // Update View
+        geocodeButton.isHidden = true
+        activityIndicatorView.startAnimating()
+        
+}
+        
+            private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+                // Update View
+                geocodeButton.isHidden = false
+                activityIndicatorView.stopAnimating()
+
+                if let error = error {
+                    print("Unable to Forward Geocode Address (\(error))")
+                    errorLabel.text = "Unable to Find Location for Address"
+
+                } else {
+                    var location: CLLocation?
+                    
+                    if let placemarks = placemarks, placemarks.count > 0 {
+                        location = placemarks.first?.location
+                    }
+
+                    if let location = location {
                         
-                        if intResult! <= 40 {
-                            self.errorLabel.text = ("You should travel more in land (>1.6km) or go to a higher place!")
-                        } else {
-                            self.errorLabel.text = ("High Enough, you are safe :D")
+                        let coordinate = location.coordinate
+                        
+                        let elevationRequest  = ElevationRequest(geoCoding: "\(coordinate.latitude),\(coordinate.longitude)")
+                                    
+                        let latitudedouble = Double(coordinate.latitude)
+                        
+                        let longitudedouble = Double(coordinate.longitude)
+
+                        let annotation = MKPointAnnotation()
+                                                  
+                        annotation.coordinate = CLLocationCoordinate2D(latitude: latitudedouble, longitude: longitudedouble)
+                        
+                        self.mapView.addAnnotation(annotation)
+                        
+                        let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+                        
+                        self.mapView.setRegion(region, animated: true)
+                        elevationRequest.getElevation { (ElevationInfo) in
+                            let elevationdata = ElevationInfo.data
+                                            
+                            let myResult = elevationdata.map(String.init).joined()
+                            
+                            let intResult = Int(myResult)
+                            
+                            print(intResult!)
+                            
+                            DispatchQueue.main.async { // Correct
+
+                                if intResult! <= 40 {
+                                    
+                                    self.errorLabel.text = ("The location is \(intResult!)m tall, should travel more in land (>1.6km) or go to a higher place!")
+                                    
+                                } else {
+                                    
+                                    self.errorLabel.text = ("The location is \(intResult!)m tall, you are safe :D")
+                                }
+                            }
                         }
+                    }
+                
+                        else  {
+                            self.errorLabel.text = "No Matching Location Found"
                     }
                 }
             }
-        )
-    }
-}
-    
-}
-
+        }

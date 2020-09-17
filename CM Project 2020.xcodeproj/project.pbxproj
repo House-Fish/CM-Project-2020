@@ -13,7 +13,6 @@
 		27302327250C96F6008EEAF8 /* ElevationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302323250C96F6008EEAF8 /* ElevationRequest.swift */; };
 		27302328250C96F6008EEAF8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302324250C96F6008EEAF8 /* LocationViewController.swift */; };
 		27302329250C96F6008EEAF8 /* Elevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302325250C96F6008EEAF8 /* Elevation.swift */; };
-		2730232A250C96F6008EEAF8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302326250C96F6008EEAF8 /* LocationManager.swift */; };
 		2730240A250C9708008EEAF8 /* Disaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302406250C9708008EEAF8 /* Disaster.swift */; };
 		2730240B250C9708008EEAF8 /* DisasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302407250C9708008EEAF8 /* DisasterViewController.swift */; };
 		2730240C250C9708008EEAF8 /* DisasterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27302408250C9708008EEAF8 /* DisasterRequest.swift */; };
@@ -49,7 +48,6 @@
 		27302323250C96F6008EEAF8 /* ElevationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevationRequest.swift; sourceTree = "<group>"; };
 		27302324250C96F6008EEAF8 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		27302325250C96F6008EEAF8 /* Elevation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevation.swift; sourceTree = "<group>"; };
-		27302326250C96F6008EEAF8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		27302406250C9708008EEAF8 /* Disaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disaster.swift; sourceTree = "<group>"; };
 		27302407250C9708008EEAF8 /* DisasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisasterViewController.swift; sourceTree = "<group>"; };
 		27302408250C9708008EEAF8 /* DisasterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisasterRequest.swift; sourceTree = "<group>"; };
@@ -206,10 +204,9 @@
 		27302322250C96F6008EEAF8 /* Location View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27302323250C96F6008EEAF8 /* ElevationRequest.swift */,
 				27302324250C96F6008EEAF8 /* LocationViewController.swift */,
 				27302325250C96F6008EEAF8 /* Elevation.swift */,
-				27302326250C96F6008EEAF8 /* LocationManager.swift */,
+				27302323250C96F6008EEAF8 /* ElevationRequest.swift */,
 			);
 			path = "Location View Controllers";
 			sourceTree = "<group>";
@@ -217,9 +214,9 @@
 		27302405250C9708008EEAF8 /* Disaster View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27302407250C9708008EEAF8 /* DisasterViewController.swift */,
 				27302409250C9708008EEAF8 /* DisasterDetailViewController.swift */,
 				27302406250C9708008EEAF8 /* Disaster.swift */,
-				27302407250C9708008EEAF8 /* DisasterViewController.swift */,
 				27302408250C9708008EEAF8 /* DisasterRequest.swift */,
 			);
 			path = "Disaster View Controller";
@@ -526,7 +523,6 @@
 				27302327250C96F6008EEAF8 /* ElevationRequest.swift in Sources */,
 				2730240C250C9708008EEAF8 /* DisasterRequest.swift in Sources */,
 				2730240D250C9708008EEAF8 /* DisasterDetailViewController.swift in Sources */,
-				2730232A250C96F6008EEAF8 /* LocationManager.swift in Sources */,
 				2730241A250D1563008EEAF8 /* AboutUsViewController.swift in Sources */,
 				27302411250C9810008EEAF8 /* ScrollViewController.swift in Sources */,
 				2730240B250C9708008EEAF8 /* DisasterViewController.swift in Sources */,

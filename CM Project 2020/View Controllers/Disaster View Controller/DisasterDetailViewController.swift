@@ -10,7 +10,8 @@ import UIKit
 import WebKit
 
 class DisasterDetailViewController: UIViewController, WKNavigationDelegate {
-
+    
+    //Declare the WebView
     var webView: WKWebView!
         
     override func loadView() {

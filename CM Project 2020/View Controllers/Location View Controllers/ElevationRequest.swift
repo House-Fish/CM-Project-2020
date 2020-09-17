@@ -29,7 +29,7 @@ struct ElevationRequest {
                 let elevationResponse = try JSONDecoder().decode(ElevationInfo.self, from: jsonData)
                 
                 let elevationdatas = elevationResponse.data
-                let elevationstatus = elevationResponse.status
+//                let elevationstatus = elevationResponse.status
                 
                 let elevationArray = elevationdatas.map { String($0) }
                 let elevationdata = elevationArray.joined(separator: "-")

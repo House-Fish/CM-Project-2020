@@ -8,9 +8,10 @@
 
 import Foundation
 
+//How the data in the API is being decoded
+
 struct DisasterData: Decodable {
     var data: [DisasterDetail]
-    
 }
 
 struct DisasterDetail: Decodable {

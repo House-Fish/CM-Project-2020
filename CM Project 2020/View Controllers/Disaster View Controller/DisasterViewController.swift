@@ -8,15 +8,19 @@
 
 import UIKit
 
-
 var myInfo = "Banana"
+var mysideMenu = true
 
 class DisasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //Declaring Items
     @IBOutlet weak var sideMenuButton: UIButton!
-        
-    var mysideMenu = true
     
+    @IBOutlet weak var leadingConst: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableView: UITableView!
+
+    //Side Menu Button is Opened out -> Move into Screen
     @IBAction func sideMenu(_ sender: Any) {
         if (mysideMenu) {
             leadingConst.constant = 0
@@ -30,6 +34,7 @@ class DisasterViewController: UIViewController, UITableViewDelegate, UITableView
         mysideMenu = !mysideMenu
     }
     
+    //Side Menu Button to be Closed -> Move off Screen
     @IBAction func sideMenuBackDisaster(_ sender: Any) {
             if mysideMenu == false{
                 leadingConst.constant = 417
@@ -41,37 +46,23 @@ class DisasterViewController: UIViewController, UITableViewDelegate, UITableView
             self.sideMenuButton.isHidden = false
             mysideMenu = !mysideMenu
         }
-    
-    
-    
-    
-    
-    @IBOutlet weak var leadingConst: NSLayoutConstraint!
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    var listofDisasters = [DisasterDetail]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-    
-            }
-        }
-    }
-    
+
+    //Running the Override Func
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.layer.cornerRadius = 15
-        tableView.layer.masksToBounds = true
         
+        tableView.layer.masksToBounds = true
         
         self.sideMenuButton.isHidden = false
         
         tableView.delegate = self
+        
         tableView.dataSource = self
     
         fetchPostData{ [weak self] result in
             switch result {
+                
             case .failure(let error):
                 print(error)
             case .success(let disaster):
@@ -81,6 +72,16 @@ class DisasterViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    //Calling onto the Array of Information
+    var listofDisasters = [DisasterDetail]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+    
+            }
+        }
+    }
+    //Table View Information -> number of sections, rows, information in cells and when clicked
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -106,7 +107,9 @@ class DisasterViewController: UIViewController, UITableViewDelegate, UITableView
         
         performSegue(withIdentifier: "showdetail", sender: self)
     }
+    
 }
+
 
 extension String {
     func capitalizingFirstLetter() -> String {
