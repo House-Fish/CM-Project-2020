@@ -14,98 +14,98 @@ var mysideMenu = true
 class DisasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Declaring Items
-    @IBOutlet weak var sideMenuButton: UIButton!
+@IBOutlet weak var sideMenuButton: UIButton!
     
-    @IBOutlet weak var leadingConst: NSLayoutConstraint!
+@IBOutlet weak var leadingConst: NSLayoutConstraint!
     
-    @IBOutlet weak var tableView: UITableView!
+@IBOutlet weak var tableView: UITableView!
 
     //Side Menu Button is Opened out -> Move into Screen
-    @IBAction func sideMenu(_ sender: Any) {
-        if (mysideMenu) {
-            leadingConst.constant = 0
+@IBAction func sideMenu(_ sender: Any) {
+    if (mysideMenu) {
+        leadingConst.constant = 0
             
-            UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseIn, animations: {
-                self.view.layoutIfNeeded()
-                self.sideMenuButton.isHidden = true
-
-            })
-        }
-        mysideMenu = !mysideMenu
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+            self.sideMenuButton.isHidden = true})
+        
     }
+    mysideMenu = !mysideMenu
+}
     
     //Side Menu Button to be Closed -> Move off Screen
-    @IBAction func sideMenuBackDisaster(_ sender: Any) {
-            if mysideMenu == false{
-                leadingConst.constant = 417
-                
-                UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseIn, animations: {
-                    self.view.layoutIfNeeded()
-                })
-            }
-            self.sideMenuButton.isHidden = false
-            mysideMenu = !mysideMenu
-        }
+@IBAction func sideMenuBackDisaster(_ sender: Any) {
+    
+    if mysideMenu == false{
+        leadingConst.constant = 417
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseIn, animations: {
+                self.view.layoutIfNeeded()})
+        
+    }
+    self.sideMenuButton.isHidden = false
+    
+    mysideMenu = !mysideMenu
+}
 
     //Running the Override Func
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.layer.cornerRadius = 15
-        
-        tableView.layer.masksToBounds = true
-        
-        self.sideMenuButton.isHidden = false
-        
-        tableView.delegate = self
-        
-        tableView.dataSource = self
+override func viewDidLoad() {
+    super.viewDidLoad()
     
-        fetchPostData{ [weak self] result in
-            switch result {
+    tableView.layer.cornerRadius = 15
+    tableView.layer.masksToBounds = true
+    self.sideMenuButton.isHidden = false
+        
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    fetchPostData{ [weak self] result in
+        switch result {
                 
-            case .failure(let error):
-                print(error)
-            case .success(let disaster):
-                self?.listofDisasters = disaster
+        case .failure(let error):
+            print(error)
+        case .success(let disaster):
+            self?.listofDisasters = disaster
                 
-            }
         }
     }
+}
     
     //Calling onto the Array of Information
-    var listofDisasters = [DisasterDetail]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+var listofDisasters = [DisasterDetail]() {
+    didSet {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
     
-            }
         }
     }
+}
     //Table View Information -> number of sections, rows, information in cells and when clicked
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listofDisasters.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let disaster = listofDisasters[indexPath.row]
-                
-        cell.textLabel?.text = disaster.fields.name
-        cell.detailTextLabel?.text = ("Status: \((disaster.fields.status).capitalizingFirstLetter())")
-        
-        return cell
-    }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+}
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return listofDisasters.count
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        myInfo = listofDisasters[indexPath.row].fields.url
+    let disaster = listofDisasters[indexPath.row]
+                
+    cell.textLabel?.text = disaster.fields.name
+    cell.detailTextLabel?.text = ("Status: \((disaster.fields.status).capitalizingFirstLetter())")
         
-        performSegue(withIdentifier: "showdetail", sender: self)
+    return cell
+}
+    
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+        
+    myInfo = listofDisasters[indexPath.row].fields.url
+        
+    performSegue(withIdentifier: "showdetail", sender: self)
+    
     }
     
 }

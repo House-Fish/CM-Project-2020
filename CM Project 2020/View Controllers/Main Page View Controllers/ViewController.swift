@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var sideMenuButton: UIButton!
     
+    @IBOutlet weak var leadingConst: NSLayoutConstraint!
+
     var mysideMenu2 = true
     
     let def = UserDefaults.standard
 
-    
     @IBOutlet weak var label_name: UILabel!
+    
     @IBAction func sideMenu(_ sender: Any) {
         if (mysideMenu2) {
             leadingConst.constant = 0
@@ -43,12 +45,9 @@ class ViewController: UIViewController {
         self.sideMenuButton.isHidden = false
 
     }
-    
-    @IBOutlet weak var leadingConst: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }

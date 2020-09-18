@@ -23,8 +23,6 @@ class DisasterInfoViewController: UIViewController {
         backgroundView.layer.cornerRadius = 15
         backgroundView.layer.masksToBounds = true
         
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +33,5 @@ class DisasterInfoViewController: UIViewController {
         self.subtitileName.text = nameOfSubtitle
         self.descriptionName.text = nameOfDescription
         self.disasterInfomation.text = "Things to Bring: \n\(thingsToBring) \n\n Actions Needed:\n\(actionsNeeded) \n\n Emergency Numbers: \n\(emergencyNumbers) \n\n Disasters: \n\(disasters)"
-        
     }
-
 }

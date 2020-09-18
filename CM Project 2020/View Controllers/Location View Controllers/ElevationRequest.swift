@@ -27,27 +27,23 @@ struct ElevationRequest {
                 
             do {
                 let elevationResponse = try JSONDecoder().decode(ElevationInfo.self, from: jsonData)
-                
                 let elevationdatas = elevationResponse.data
-//                let elevationstatus = elevationResponse.status
                 
                 let elevationArray = elevationdatas.map { String($0) }
+                
                 let elevationdata = elevationArray.joined(separator: "-")
                 
                 completionHandler(elevationResponse)
                 
-                    
             }
+                
             catch {
                 let error = error
-                print(error) // or print(error.localizedDescription)
+                print(error)
+                
             }
         }
         dataTask.resume()
-        
-        
     }
-    
-    
 }
 

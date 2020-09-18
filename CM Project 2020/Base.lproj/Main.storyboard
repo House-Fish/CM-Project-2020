@@ -160,7 +160,7 @@ User</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 3.03.40 PM" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-L6-FDi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Are You Safe Background" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-L6-FDi">
                                 <rect key="frame" x="-9" y="0.0" width="432" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -361,7 +361,7 @@ User</string>
                                 <rect key="frame" x="-3" y="0.0" width="417" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 4.09.21 PM" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-BS-cyN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Disaster Information Background" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-BS-cyN">
                                 <rect key="frame" x="-73" y="-42" width="559" height="898"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -377,10 +377,6 @@ User</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 4.04.34 PM" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-t0-1Nm">
-                                <rect key="frame" x="366" y="173" width="37" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGv-Rq-POo">
                                 <rect key="frame" x="20" y="232" width="374" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -419,6 +415,10 @@ User</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue Heart" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-t0-1Nm">
+                                <rect key="frame" x="365" y="179" width="37" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="EQO-x0-avN"/>
@@ -446,7 +446,7 @@ User</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 6.45.18 PM" translatesAutoresizingMaskIntoConstraints="NO" id="hFL-tC-p6j">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Donations Background" translatesAutoresizingMaskIntoConstraints="NO" id="hFL-tC-p6j">
                                 <rect key="frame" x="0.0" y="-7" width="414" height="903"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -633,7 +633,7 @@ User</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 11.33.08 PM" translatesAutoresizingMaskIntoConstraints="NO" id="ltf-aK-Zbu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="First Aid Background" translatesAutoresizingMaskIntoConstraints="NO" id="ltf-aK-Zbu">
                                 <rect key="frame" x="0.0" y="-17" width="423" height="931"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -790,7 +790,7 @@ User</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 9.15.59 PM" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-xO-3uW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About us Background" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-xO-3uW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1008,7 +1008,7 @@ https://www.ready.gov/volcanoes</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 11.33.45 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-3C-8V2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="First Aid Information Background" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-3C-8V2">
                                 <rect key="frame" x="-11" y="-9" width="425" height="935"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1142,7 +1142,7 @@ https://www.ready.gov/volcanoes</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot 2020-09-12 at 3.29.35 PM" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-Xd-lMC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Disaster Background " translatesAutoresizingMaskIntoConstraints="NO" id="HKm-Xd-lMC">
                                 <rect key="frame" x="-24" y="0.0" width="461" height="905"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1897,7 +1897,7 @@ https://www.ready.gov/volcanoes</string>
                         <outlet property="Img_7" destination="fkV-xd-Hps" id="PPc-Va-5ul"/>
                         <outlet property="Img_8" destination="aE2-VC-TSa" id="8Hw-kU-Nhs"/>
                         <outlet property="Img_9" destination="9Tx-Ph-P81" id="i3x-8L-cqd"/>
-                        <outlet property="Jakarta_1" destination="OwT-tm-kGk" id="Wz0-bm-9ia"/>
+                        <outlet property="Jakarta_1" destination="Bq9-AW-qlz" id="wDe-Nx-OKW"/>
                         <outlet property="Malaysia_1" destination="elB-nJ-u9v" id="TMq-uc-mBR"/>
                         <outlet property="Osaka_1" destination="NX3-DW-Icn" id="R7y-MJ-tBa"/>
                         <outlet property="Shanghai_1" destination="bhE-qL-3xs" id="BLb-UM-Cgt"/>
@@ -1912,37 +1912,38 @@ https://www.ready.gov/volcanoes</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R5v-Qh-Wx5"/>
+        <segue reference="ctL-BZ-9m1"/>
         <segue reference="YDz-mW-VzA"/>
         <segue reference="4Vt-d1-WP2"/>
-        <segue reference="238-pu-V5r"/>
-        <segue reference="IjJ-QG-zbu"/>
-        <segue reference="C0u-hY-hKQ"/>
+        <segue reference="0YU-E6-GVy"/>
+        <segue reference="3Fv-cg-46T"/>
+        <segue reference="Lrv-bD-l5c"/>
         <segue reference="j51-5S-LqM"/>
-        <segue reference="8e9-Rx-TLT"/>
-        <segue reference="qFz-DQ-AW2"/>
+        <segue reference="ZPO-No-R2m"/>
+        <segue reference="38Z-mX-z2W"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="About us Background" width="242" height="524"/>
+        <image name="Are You Safe Background" width="660" height="1422"/>
         <image name="Beijing" width="1080" height="1080"/>
+        <image name="Blue Heart" width="66" height="52"/>
         <image name="Brunei" width="1400" height="980"/>
         <image name="Cambodia" width="259" height="194"/>
+        <image name="Disaster Background " width="416" height="902"/>
+        <image name="Disaster Information Background" width="338" height="728"/>
+        <image name="Donations Background" width="418" height="912"/>
+        <image name="First Aid Background" width="516" height="1114"/>
+        <image name="First Aid Information Background" width="514" height="1118"/>
         <image name="Heart Icon" width="50" height="50"/>
         <image name="Hong Kong" width="764" height="430"/>
         <image name="Jakarta" width="800" height="600"/>
         <image name="Malaysia" width="2800" height="2800"/>
         <image name="Navigation_Icon" width="76" height="70"/>
         <image name="Osaka" width="800" height="600"/>
-        <image name="Screenshot 2020-09-12 at 11.33.08 PM" width="516" height="1114"/>
-        <image name="Screenshot 2020-09-12 at 11.33.45 PM" width="514" height="1118"/>
         <image name="Screenshot 2020-09-12 at 11.34.20 PM" width="262" height="250"/>
         <image name="Screenshot 2020-09-12 at 11.34.36 PM" width="230" height="208"/>
         <image name="Screenshot 2020-09-12 at 11.34.49 PM" width="456" height="252"/>
         <image name="Screenshot 2020-09-12 at 11.34.58 PM" width="464" height="206"/>
-        <image name="Screenshot 2020-09-12 at 3.03.40 PM" width="660" height="1422"/>
-        <image name="Screenshot 2020-09-12 at 3.29.35 PM" width="416" height="902"/>
-        <image name="Screenshot 2020-09-12 at 4.04.34 PM" width="66" height="52"/>
-        <image name="Screenshot 2020-09-12 at 4.09.21 PM" width="338" height="728"/>
-        <image name="Screenshot 2020-09-12 at 6.45.18 PM" width="418" height="912"/>
         <image name="Screenshot 2020-09-12 at 6.51.45 PM" width="438" height="430"/>
         <image name="Screenshot 2020-09-12 at 6.54.12 PM" width="410" height="372"/>
         <image name="Screenshot 2020-09-12 at 6.54.22 PM" width="416" height="392"/>
@@ -1963,7 +1964,6 @@ https://www.ready.gov/volcanoes</string>
         <image name="Screenshot 2020-09-12 at 7.46.46 PM" width="386" height="110"/>
         <image name="Screenshot 2020-09-12 at 7.46.49 PM" width="336" height="110"/>
         <image name="Screenshot 2020-09-12 at 7.59.09 PM" width="352" height="118"/>
-        <image name="Screenshot 2020-09-12 at 9.15.59 PM" width="242" height="524"/>
         <image name="Screenshot 2020-09-13 at 12.09.41 AM" width="480" height="228"/>
         <image name="Shanghai" width="241" height="338"/>
         <image name="Taiwan" width="800" height="733"/>

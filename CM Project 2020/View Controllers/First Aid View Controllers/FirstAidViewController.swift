@@ -22,7 +22,6 @@ class FirstAidViewController: UIViewController {
     
     var mysideMenu = true
     
-    
     @IBAction func sideMenu(_ sender: Any) {
         if (mysideMenu) {
             leadingConst.constant = 0
@@ -34,6 +33,7 @@ class FirstAidViewController: UIViewController {
         }
         mysideMenu = !mysideMenu
     }
+    
     @IBAction func sideMenuBackAreYouSafe(_ sender: Any) {
             if mysideMenu == false{
                 leadingConst.constant = 417
@@ -48,8 +48,6 @@ class FirstAidViewController: UIViewController {
     
     
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
-    
-    
     
     @IBAction func lacerations(_ sender: Any) {
         aidName = "lacerations"
@@ -89,6 +87,7 @@ class FirstAidViewController: UIViewController {
         
         
     }
+    
     @IBAction func coldweather(_ sender: Any) {
         aidName = "Cold Weather"
         aidDescription = "When you stay in a cold weather for a long time, it increases the chance of you getting frostbyte, etc... "
@@ -98,24 +97,13 @@ class FirstAidViewController: UIViewController {
         cases = "Hypothermia\n\nWhat you can do:\nWear multiple layers of clothes\nSympyoms:\nEarly signs include Feeling cold, Shivering, Stumbling and mumbling( These are signs that cold is affecting your body and brain.)\n\nFrostbite\nWhat you can do:\n, For milder cases of frostbite, take over-the-counter ibuprofen (Advil, Motrin IB, others) to reduce pain and inflammation, For superficial frostbite that has been rewarmed, some people find it soothing to apply aloe vera gel or lotion to the affected area several times a day, Avoid further exposure to cold and wind, Remove rings or other tight items. Try to do this before the affected area swells.\nSymptoms\nEarly signs, Red and cold skin; skin may start to turn white but is still soft, Prickling and numbness, Memory loss, Slurred speech, Drowsiness, Tingling, Stinging\nThings you should not do:\n-Walking on frostbitten feet, Applying direct heat or rub the area, Breaking blisters that may develop. Blisters act like a bandage. Allow blisters to break on their own."
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sideBarView.layer.cornerRadius = 15
         sideBarView.layer.masksToBounds = true
         
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
