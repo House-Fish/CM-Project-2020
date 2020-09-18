@@ -83,7 +83,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city’s many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum)."
         thingsToBring = " 1. Flashlight (Phone flashlight)\n 2. Evacuate the place before the flood occurs\n 3. Mini first aid kit\n 4. Essential medicine\n 5. A whistle\n 6. Winter clothes"
         actionsNeeded = "1. Keep updated on the weather forecast"
-        emergencyNumbers = "Abulence: 119\n Fire Brigade: 119\n Polic: 110"
+        emergencyNumbers = "Ambulence: 119\n Fire Brigade: 119\n Police: 110"
         disasters = "\(Typhoon)\n\n\(Earthquake)\n\n\(Cyclones)\n\n\(Snow)\n\n\(Tsunami)"
         selectedImage = "Tokyo.jpg"
         
@@ -96,7 +96,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Brunei is a tiny nation on the island of Borneo, in 2 distinct sections surrounded by Malaysia and the South China Sea. It's known for its beaches and biodiverse rainforest, much of it protected within reserves. The capital, Bandar Seri Begawan, is home to the opulent Jame’Asr Hassanil Bolkiah mosque and its 29 golden domes. The capital's massive Istana Nurul Iman palace is the residence of Brunei’s ruling sultan."
         thingsToBring = " 1. Ensure you have a few face mask with you\n 2. Ensure you have the necessary medication/ things if you have respitatory problems\n 3. Whistle\n 4. Cotton t-shirt to filter air\n 5. Flashlight (Phone flashlight)"
         actionsNeeded = "1. Become familiar with the land around you; learn whether lanslide have occurred in the area around you\n 2. Keep updated on the weather forecast\n 3. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 991\n Fire Brigade: 995\n Polic: 993"
+        emergencyNumbers = "Ambulence: 991\n Fire Brigade: 995\n Police: 993"
         disasters = "\(Floods)\n\n\(LandSlide)\n\n\(Haze)"
         selectedImage = "Brunei.jpg"
 
@@ -109,7 +109,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Beijing, China’s sprawling capital, has history stretching back 3 millennia. Yet it’s known as much for modern architecture as its ancient sites such as the grand Forbidden City complex, the imperial palace during the Ming and Qing dynasties. Nearby, the massive Tiananmen Square pedestrian plaza is the site of Mao Zedong’s mausoleum and the National Museum of China, displaying a vast collection of cultural relics."
         thingsToBring = " 1. A flashlight (Phone flashlight)\n 2. Mini first aid kit\n 3. Essential medicine\n 4. A whistle\n 5. Bring light, loose-fitting, light coloured clothes\n 6. Cotton clothes"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens\n 3. Become familiar with the land around you; learn whether lanslide have occurred in the area around you"
-        emergencyNumbers = "Abulence: 120/999\n Fire Brigade: 119\n Polic: 119"
+        emergencyNumbers = "Ambulence: 120/999\n Fire Brigade: 119\n Police: 119"
         disasters = "\(Earthquake)\n\n\(Floods)\n\n\(HeatWave)\n\n\(LandSlide)"
         selectedImage = "Beijing.jpg"
 
@@ -122,7 +122,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Cambodia is a Southeast Asian nation whose landscape spans low-lying plains, the Mekong Delta, mountains and Gulf of Thailand coastline. Phnom Penh, its capital, is home to the art deco Central Market, glittering Royal Palace and the National Museum's historical and archaeological exhibits. In the country's northwest are the ruins of Angkor Wat, a massive stone temple complex built during the Khmer Empire."
         thingsToBring =  " 1. Flashlight (Phone flashlight)\n 2. Bring extra clothes (to change if needed)\n 3. Rain coat/ umbrella \n 4. Ensure you have bottled water\n 5. Ensure you have a few face mask with you\n 6. Ensure you have the necessary medication/ things if you have respitatory problem"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 119\n Fire Brigade: 118\n Polic: 117"
+        emergencyNumbers = "Ambulence: 119\n Fire Brigade: 118\n Police: 117"
         disasters = "\(Floods)\n\n\(HeavyRainfall)\n\n\(Droughts)\n\n\(Typhoon)\n\n\(Haze)"
         selectedImage = "Cambodia.jpg"
 
@@ -136,7 +136,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Shanghai, on China’s central coast, is the country's biggest city and a global financial hub. Its heart is the Bund, a famed waterfront promenade lined with colonial-era buildings. Across the Huangpu River rises the Pudong district’s futuristic skyline, including 632m Shanghai Tower and the Oriental Pearl TV Tower, with distinctive pink spheres. Sprawling Yu Garden has traditional pavilions, towers and ponds."
         thingsToBring = " 1. A flashlight (Phone flashlight)\n 2. Mini first aid kit\n 3. Essential medicine\n 4. A whistle\n 5. Bring light, loose-fitting, light coloured clothes"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 120\n Fire Brigade: 119\n Polic: 110"
+        emergencyNumbers = "Ambulence: 120\n Fire Brigade: 119\n Police: 110"
         disasters = "\(Droughts)\n\n\(Earthquake)\n\n\(Floods)\n\n\(HeatWave)\n\n\(Typhoon)"
         selectedImage = "Shanghai.jpg"
 
@@ -150,7 +150,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Hong Kong, officially the Hong Kong Special Administrative Region of the People's Republic of China, is a metropolitan area and special administrative region of the People's Republic of China on the eastern Pearl River Delta of the South China Sea."
         thingsToBring = " 1. Bring extra clothes (to change if needed)\n 2. Rain coat/ umbrella\n 3. Ensure you have a few face mask with you\n 4. Ensure you have the necessary\n 5. medication/ things if you have respitatory problems"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 999\n Fire Brigade: 999\n Polic: 999"
+        emergencyNumbers = "Ambulence: 999\n Fire Brigade: 999\n Police: 999"
         disasters = "\(HeavyRainfall)\n\n\(Floods)\n\n\(Droughts)\n\n\(ForestFire)\n\n\(PoorAirVentilation)"
         selectedImage = "Hong Kong.jpg"
 
@@ -164,7 +164,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Jakarta, Indonesia's massive capital, sits on the northwest coast of the island of Java. A historic mix of cultures – Javanese, Malay, Chinese, Arab, Indian and European – has influenced its architecture, language and cuisine. The old town, Kota Tua, is home to Dutch colonial buildings, Glodok (Jakarta’s Chinatown) and the old port of Sunda Kelapa, where traditional wooden schooners dock."
         thingsToBring = " 1. Bring extra clothes (to change if needed)\n 2. Ensure you have a few face mask with you\n 3. Ensure you have the necessary medication/ things if you have respitatory problems\n 4. A flashlight (Phone flashlight)\n 5. Mini first aid kit\n 6. Essential medicine\n 7. A whistle"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 119\n Fire Brigade: 113\n Polic: 110"
+        emergencyNumbers = "Ambulence: 119\n Fire Brigade: 113\n Police: 110"
         disasters = "\(Earthquake)\n\n\(Volcaniceruption)\n\n\(Floods)\n\n\(Haze)"
         selectedImage = "Jakarta.jpg"
 
@@ -177,7 +177,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Osaka is a large port city and commercial center on the Japanese island of Honshu. It's known for its modern architecture, nightlife and hearty street food. The 16th-century shogunate Osaka Castle, which has undergone several restorations, is its main historical landmark. It's surrounded by a moat and park with plum, peach and cherry-blossom trees. Sumiyoshi-taisha is among Japan’s oldest Shinto shrines."
         thingsToBring = "1. Flashlight (Phone flashlight)\n 2. Evacuate the place before the flood occurs\n 3. Mini first aid kit\n 4. Essential medicine\n 5. A whistle\n 6. N95 mask\n 7. Cotton clothes"
         actionsNeeded = "1. Keep updated on the weather forecast\n 2. Should a flood occur soon, evacuate the place first before it happens\n 3. Inform someone else outside the country of your plans\n 4. Know the area well if volcanic eruption has taken place before\n 5. Know the evacuation plans in the area should an eruption occur"
-        emergencyNumbers = "Abulence: 119\n Fire Brigade: 119\n Polic: 110"
+        emergencyNumbers = "Ambulence: 119\n Fire Brigade: 119\n Police: 110"
         disasters = "\(Floods)\n\n\(Typhoon)\n\n\(Earthquake)\n\n\(Cyclones)\n\n\(Volcaniceruption)\n\n\(Tsunami)"
         selectedImage = "Osaka.jpg"
 
@@ -189,7 +189,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. It's known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers."
         thingsToBring = "1. Flashlight (Phone flashlight)\n 2. Whistle\n 3. Cotton t-shirt to filter air\n 4. A few face masks\n 5. Ensure you have the necessary medication/ things if you have respitatory problems\n 6. Mini first aid kit\n 7. Essential medicine"
         actionsNeeded = "1. Keep updated on weather forecast\n 2. Become familiar with the land around you; learn whether lanslide have occurred in the area around you\n 3. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 999\n Fire Brigade: 994\n Polic: 999"
+        emergencyNumbers = "Ambulence: 999\n Fire Brigade: 994\n Police: 999"
         disasters = "\(Floods)\n\n\(LandSlide)\n\n\(Haze)\n\n\(Earthquake)\n\n\(Droughts)\n\n\(Tsunami)"
         selectedImage = "Malaysia.jpg"
 
@@ -201,7 +201,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Taiwan, officially the Republic of China, is a country in East Asia. Neighbouring countries include the People's Republic of China to the northwest, Japan to the northeast, and the Philippines to the south."
         thingsToBring = "1. Flashlight (Phone flashlight)\n 2. Bring extra clothes (to change if needed)\n 3. Rain coat/ umbrella\n 4. Mini first aid kit\n 5. Essential medicine\n 6. A whistle"
         actionsNeeded = "1. Keep updated on weather forecast\n 2. Become familiar with the land around you; learn whether lanslide have occurred in the area around you\n 3. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 119\n Fire Brigade: 119\n Polic: 110"
+        emergencyNumbers = "Ambulence: 119\n Fire Brigade: 119\n Police: 110"
         disasters = "\(Typhoon)\n\n\(HeavyRainfall)\n\n\(Floods)\n\n\(LandSlide)\n\n\(Droughts)\n\n\(Earthquake)"
         selectedImage = "Taiwan.jpg"
 
@@ -213,7 +213,7 @@ class ScrollViewController: UIViewController {
         nameOfDescription = "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin."
         thingsToBring = "1. Flashlight (Phone flashlight)\n 2. Bring extra clothes (to change if needed)\n 3. Rain coat/ umbrella\n 4. Whistle\n 5. Cotton t-shirt to filter air\n 6. Mini first aid kit\n 7. Essential medicine\n 8. A whistle"
         actionsNeeded = "1. Keep updated on weather forecast\n 2. Become familiar with the land around you; learn whether lanslide have occurred in the area around you\n 3. Should a flood occur soon, evacuate the place first before it happens"
-        emergencyNumbers = "Abulence: 1154\n Fire Brigade: 119\n Polic: 1155"
+        emergencyNumbers = "Ambulence: 1154\n Fire Brigade: 119\n Police: 1155"
         disasters = "\(Floods)\n\n\(HeavyRainfall)\n\n\(LandSlide)\n\n\(ForestFire)\n\n\(Earthquake)"
         selectedImage = "Thailand.jpg"
 

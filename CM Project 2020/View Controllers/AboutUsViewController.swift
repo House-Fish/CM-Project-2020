@@ -51,8 +51,7 @@ class AboutUsViewController: UIViewController {
     }
     
     @IBAction func dismissKeyboard(_ sender: UITextField) {
-        sender.resignFirstResponder()
-
+        sender.resignFirstResponder()        
     }
     
     
